@@ -1,0 +1,238 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+/*Para el encabezado*/
+header{
+    position: relative;
+    width:100%;
+    height: 140px;
+    background:rgb(213, 219, 219);
+    box-shadow: 0px 0px 1em rgb(0,0,0);
+}
+header img{
+    position: absolute;
+    z-index: 5;
+    margin: 20px;
+    margin-left: 60px;
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    box-shadow: 0em 0em 1.5em rgb(137, 7, 228);
+    animation-delay: 0.1s;
+}
+header h2{
+    font-family: letra4;
+    font-size: 36px;
+    color: #D35400 ;
+    text-shadow: 1px 3px 0px #6b251d, 1px 13px 5px rgb(171,168,168);
+    position: absolute;
+    top: 15px;
+    left: 200px;
+    animation-delay: 0.8s;
+    animation-duration: 2s;
+}
+
+#buscar{
+  box-shadow: 0 0 2px 2px #34495E;
+  width: 300px;
+  background: #EAF2F8;
+  border-radius: 6px;
+  padding: 3px;
+  position: absolute;
+  right: 120px;
+  top:30px;
+  box-sizing: border-box;
+}
+#search{
+  background:url('/img/lupa.png') #b57905;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-size: contain;
+  border:none;
+  outline: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#clave{
+  font-family: letra55;
+  font-size: 18px;
+  padding-left: 10px;
+  width: 253px;
+  border:none;
+  outline: none;
+  background: #EAF2F8;
+  height: 30px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.clave::-webkit-input-placeholder {
+    color: #BFC9CA ;
+}
+.clave::-moz-placeholder {
+    color: #BFC9CA;
+}
+.clave::-moz-placeholder {
+    color: #BFC9CA  ;
+}
+.clave::-ms-input-placeholder {
+    color: #BFC9CA  ;
+}
+
+/*parte de la seccion principal*/
+body{
+  background:#EBF5FB;
+  width: 100%;
+}
+.main{
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing:border-box;
+}
+.registro{
+    border:solid 1px #3498DB;
+    margin: 10px auto;
+    width: 70%;
+    background: rgb(12, 27, 46);
+    color:rgb(240, 239, 239);
+    border-radius: 15px;
+    padding: 30px;
+    box-sizing:border-box;
+    font-family: letra37;
+    font-size: 20px;
+    box-shadow: 1em 1em 1em #1B2631;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.registro2{
+    background: rgb(12, 27, 46);
+    height: 25px;
+    outline: none;
+    border: solid 1px #03a9f4;
+    padding: 10px;
+    color:rgb(236, 238, 231);
+    font-family:letra35;
+    font-size: 18px;
+}
+.form{
+  width: 49%;
+}
+/*Para el pie de pagina*/
+footer{
+    background: url('../img/textura/39.png') #5D6D7E;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.pie{
+    text-align: center;
+    margin: auto;
+    width: 40%;
+    box-sizing: border-box;
+}
+.pie h2{
+    font-family: letra51;
+    font-size:30px;
+}
+.pie a{
+    padding: 5px;
+    display: inline-block;
+    font-size: 25px;
+    background: #F8F9F9;
+    width: 36px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color:#A93226;
+    margin: 5px;
+}
+.pie p{
+    font-family: letra58;
+    font-size: 22px;
+}
+.main .login{
+  padding: 15px;
+  text-align: center;
+  border-radius:5px;
+  width: 50%;
+  margin:10px auto;
+  border: 1px solid rgb(147, 158, 155);
+  background: rgb(236, 234, 237);
+  box-sizing: border-box;
+}
+.main .login label{
+  font-family: letra4;
+  font-size: 30px;
+  color:#C0392B;
+  font-weight: 500;
+  text-shadow: 0px 5px 1px rgba(33, 47, 60, 0.5);
+}
+.main .input{
+  outline: none;
+  font-size: 21px;
+  border-radius: 5px;
+  color:rgb(68, 70, 71);
+  border:solid 1px rgb(14, 148, 166);
+  padding: 3px;
+  box-shadow: 0px 3px 1px rgba(10, 10, 10,0.5);
+}
+#boton{
+  background: rgb(11, 136, 207);
+  font-size: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  color:#fff;
+  border:none;
+  border-radius:2px;
+}
+.categoria{
+  width: 180px;
+  padding: 10px;
+  border-radius:5px;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0);
+  background: #F2F3F4;
+  margin:15px auto;
+  border:solid 1px #AEB6BF;
+  box-sizing: border-box;
+}
+.categoria:hover{
+  transform: scale(1) rotate(360deg);;
+  transition-duration: 1s;
+}
+.categoria h3{
+  text-align: center;
+}
+.categoria p{
+  font-weight: 600;
+  color: #154360;
+}
+.categoria h3 a{
+  color:#4A235A;
+  text-decoration: none;
+  font-size: 26px;
+  font-family: letra51;
+}
+.articulo{
+  margin: auto;
+  width: 100px;
+  height: 100px
+}
+.articulo img{
+  width: 100%;
+  height: 100%;
+}
+.login a{
+  font-family: letra35;
+  color:rgb(18, 0, 159);
+}
+.login p{
+  color:rgb(230, 30, 17);
+}
+/*--------------------------------------------------------------------------------------------------------------------------------*/

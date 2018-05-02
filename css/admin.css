@@ -1,0 +1,61 @@
+*{
+  padding: 0px;
+  margin:0px;
+}
+body, html{
+height: 100%;
+margin: 0;
+}
+header{
+  background: #2980B9;
+  height:10%;
+}
+aside{
+  display: block;
+  height: 90%;
+  width:20%;
+  background:rgb(40, 55, 71);
+  box-sizing: border-box;
+  font-family: letra8;
+}
+.icono:hover{
+  color:rgb(227, 17, 56);
+}
+ul li{
+  display: block;
+  width: 100%;
+  padding-top:15px;
+  padding-bottom: 15px;
+  border-bottom:solid 1px rgb(4, 140, 170);
+  box-sizing: border-box;
+}
+ul li a{
+  display: block;
+  margin: auto;
+  width: 80%;
+  color:rgb(247, 247, 247);
+  text-decoration: none;
+  font-size: 20px;
+}
+h2{
+  text-align: center;
+  padding-top: 15px;
+  display: block;
+  color:#E5E7E9 ;
+  float: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+.panel{
+  width: 20%;
+  background: #2471A3;
+  font-weight: 400;
+}
+.titulo{
+  padding-top: 5px;
+  width: 80%;
+  font-family: letra4;
+  color:#F9EBEA;
+  font-weight: 100;
+  font-size: 28px;
+}
