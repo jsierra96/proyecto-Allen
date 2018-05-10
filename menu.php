@@ -2,7 +2,7 @@
     <nav>
         <ul class="menu1">
           <li><a href="/">Inicio</a></li>
-            <li><a href="#">Novedades</a></li>
+            <li><a href="/novedades.php">Novedades</a></li>
             <li><a href="categorias.php?tipo=men">Hombres</a></li>
             <li><a href="categorias.php?tipo=woman">Mujeres</a></li>
             <li><a href="categorias.php?tipo=children">Niños</a></li>

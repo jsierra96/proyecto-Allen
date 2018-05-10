@@ -14,7 +14,7 @@
              $arrRS = $Conn->ejecutarConsulta($sQuery);
              if ($arrRS != null){
                   $arreglo[]=array('nombre'=>$arrRS[0][1],'apellidos'=>$arrRS[0][2],'direccion'=>$arrRS[0][4],'telefono'=>$arrRS[0][5],
-                  'email'=>$arrRS[0][6],'paypal'=>$arrRS[0][8]);
+                  'email'=>$arrRS[0][6],'paypal'=>$arrRS[0][8],'id'=>$arrRS[0][0]);
                   $_SESSION['usuario']=$arreglo;
                   $Conn->desconectar();
                   header("Location: index.php");

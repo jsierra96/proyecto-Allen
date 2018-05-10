@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?>
 <html>
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -10,7 +13,7 @@
     <link rel="stylesheet" href="/css/Animate.css" type="text/css"/>
     <style>
     .main{
-      width: 70%;
+      width: 68%;
     }
     </style>
 </head>
@@ -48,7 +51,7 @@
         <div class="articulo">
           <img src="/img/hz.png" alt="">
         </div>
-        <h3><a href="productos.php?tipo=zapato&sexo=men">Zapatos</a></h3>
+        <h3><a href="productos.php?tipo=Tennis&sexo=men">Tennis</a></h3>
       </article>
       <article class="categoria">
         <div class="articulo">
@@ -64,15 +67,9 @@
       </article>
       <article class="categoria">
         <div class="articulo">
-          <img src="/img/hombre-pijama.png" alt="">
+          <img src="/img/gorra.png" alt="">
         </div>
-        <h3><a href="productos.php?tipo=pijama&sexo=men">Pijama</a></h3>
-      </article>
-      <article class="categoria">
-        <div class="articulo">
-          <img src="/img/chamarra01.png" alt="">
-        </div>
-        <h3><a href="productos.php?tipo=chamarra&sexo=men">Chamaras</a></h3>
+        <h3><a href="productos.php?tipo=gorra&sexo=men">Gorras</a></h3>
       </article>
       <article class="categoria">
         <div class="articulo">
@@ -80,21 +77,9 @@
         </div>
         <h3><a href="productos.php?tipo=cartera&sexo=men">Carteras</a></h3>
       </article>
-      <article class="categoria">
-        <div class="articulo">
-          <img src="/img/Legging hombre.jpg" alt="">
-        </div>
-        <h3><a href="productos.php?tipo=legging&sexo=men">Legging</a></h3>
-      </article>
       <?php
     }else if($_GET['tipo']=="woman"){
       ?>
-      <article class="categoria">
-        <div class="articulo">
-          <img src="/img/PANTALON-CARGO-Mujer.png" alt="">
-        </div>
-        <h3><a href="productos.php?tipo=pantalon&sexo=woman">Pantalones</a></h3>
-      </article>
       <article class="categoria">
         <div class="articulo">
           <img src="/img/mc.png" alt="">
@@ -103,33 +88,9 @@
       </article>
       <article class="categoria">
         <div class="articulo">
-          <img src="/img/mi.png" alt="">
-        </div>
-        <h3><a href="productos.php?tipo=interior&sexo=woman">Ropa Interior</a></h3>
-      </article>
-      <article class="categoria">
-        <div class="articulo">
-          <img src="/img/women-shoes.png" alt="">
-        </div>
-        <h3><a href="productos.php?tipo=zapato&sexo=woman">Zapatos</a></h3>
-      </article>
-      <article class="categoria">
-        <div class="articulo">
-          <img src="/img/Sweater muje.jpg" alt="">
-        </div>
-        <h3><a href="productos.php?tipo=sweater&sexo=woman">Sweater</a></h3>
-      </article>
-      <article class="categoria">
-        <div class="articulo">
           <img src="/img/short-mujer.png" alt="">
         </div>
         <h3><a href="productos.php?tipo=short&sexo=woman">Short</a></h3>
-      </article>
-      <article class="categoria">
-        <div class="articulo">
-          <img src="/img/mu-pijama.png" alt="">
-        </div>
-        <h3><a href="productos.php?tipo=pijama&sexo=woman">Pijama</a></h3>
       </article>
       <article class="categoria">
         <div class="articulo">
@@ -147,17 +108,42 @@
         <div class="articulo">
           <img src="/img/mu-Legging.png" alt="">
         </div>
-        <h3><a href="productos.php?tipo=legging&sexo=men">Legging</a></h3>
+        <h3><a href="productos.php?tipo=legging&sexo=woman">Legging</a></h3>
       </article>
       <article class="categoria">
         <div class="articulo">
           <img src="/img/1.png" alt="">
         </div>
-        <h3><a href="productos.php?tipo=falda&sexo=men">Faldas</a></h3>
+        <h3><a href="productos.php?tipo=falda&sexo=woman">Faldas</a></h3>
+      </article>
+      <article class="categoria">
+        <div class="articulo">
+          <img src="/img/perfumes1.png" alt="">
+        </div>
+        <h3><a href="productos.php?tipo=locion&sexo=woman">Lociones</a></h3>
+      </article>
+      <article class="categoria">
+        <div class="articulo">
+          <img src="/img/mu-Legging.png" alt="">
+        </div>
+        <h3><a href="productos.php?tipo=malla&sexo=woman">Mallas deportivas</a></h3>
       </article>
       <?php
     }else{
-
+      ?>
+      <article class="categoria">
+        <div class="articulo">
+          <img src="/img/hc.png" alt="">
+        </div>
+        <h3><a href="productos.php?tipo=camisa&sexo=children">Camisas</a></h3>
+      </article>
+      <article class="categoria">
+        <div class="articulo">
+          <img src="/img/nic3b1aaa-pijama.png" alt="">
+        </div>
+        <h3><a href="productos.php?tipo=pijama&sexo=children">Pijama</a></h3>
+      </article>
+      <?php
     }
     ?>
 

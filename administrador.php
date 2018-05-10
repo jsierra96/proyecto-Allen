@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['admin'])){
+  header("Location: login.php");  
+}
  ?>
 <html lang="es">
   <head>
@@ -18,15 +21,13 @@ session_start();
       include 'header.php';
       ?>
     </header>
+    <section class="container">
+      <?php
+        include 'aside.php';
+      ?>
+      <section class="main">
 
-    <aside id="panel">
-      <ul>
-        <li><a href="administrador.php" class="icon-home icono"> Home</a></li>
-        <li><a href="#" class="icon-plus icono"> Agregar</a></li>
-        <li><a href="#" class="icon-minus icono"> Eliminar</a></li>
-        <li><a href="verificar.php?salir=0" class=" icon-exit icono"> Salir</a></li>
-      </ul>
-    </aside>
-
+      </section>
+    </section>
   </body>
 </html>

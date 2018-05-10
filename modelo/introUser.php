@@ -8,7 +8,6 @@ if(isset($_SESSION['user'])){
   $sQuery ="INSERT INTO usuarios (nombre, apellidos, password, direccion, telefono, email, fechanacimiento, cuentapaypal)
    VALUES ('".$usu[0]['nombre']."','".$usu[0]['apellidos']."','".$usu[0]['contra']."',
     '".$usu[0]['direccion']."','".$usu[0]['telefono']."','".$usu[0]['email']."','".$usu[0]['fecha']."','".$usu[0]['paypal']."')";
-  // "SELECT * FROM usuarios WHERE email ='".$user."' AND password = '".$pass."'";
   $nAfectados = $conn->ejecutarComando($sQuery);
   $conn->desconectar();
   }
