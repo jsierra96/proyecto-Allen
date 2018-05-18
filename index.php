@@ -12,14 +12,23 @@ session_start();
     <link rel="stylesheet" href="css/Animate.css" type="text/css"/>
     <link rel="stylesheet" href="css/menu.css" type="text/css"/>
     <link rel="stylesheet" href="css/slide.css">
+    <style>
+      .main{
+        width: 75%;
+      }
+    </style>
   </head>
   <body>
     <header>
       <?php
-        include 'header.php';
-        include 'menu.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/vistas/menu.php';
       ?>
     </header>
+    <div id="contenedor">
+    <?php
+      include $_SERVER['DOCUMENT_ROOT'].'/vistas/aside1.php';
+     ?>
     <section class="main">
       <article class="container">
          <div class="slidesjs-wraper">
@@ -30,8 +39,8 @@ session_start();
                 <img src="http://www.travelingchicboutique.com/wp-content/uploads/2016/10/Traveling-Chic-Boutique-Trunk-Show-2.jpg" />
             </div>
         </div>
-        <script src="js/jquery-1.9.1.min.js"></script>
-        <script src="js/jquery.slides.js"></script>
+        <script src="/js/jquery-1.9.1.min.js"></script>
+        <script src="/js/jquery.slides.js"></script>
         <script>
            $(function() {
            $(".slides").slidesjs({
@@ -45,8 +54,19 @@ session_start();
               });
         </script>
       </article>
+      <section class="dos">
+        <article>
+          <h2>Mision</h2>
+          <p>Atender las necesidades de moda y del vestir de la sociedad, proporcionando a sus clientes productos de calidad, a sus accionistas una rentabilidad creciente y sostenible y a sus empleados la posibilidad de desarrollar sus competencias profesionales.</p>
+        </article>
+        <article>
+          <h2>Visi&oacute;n</h2>
+          <p>Ser una empresa de referencia, líder en distribución de moda, en continuo crecimiento, con presencia en el mercado, que se distinga por proporcionar una calidad de atención y servicio excelente a sus clientes.</p>
+        </article>
+      </section>
+      
     </section>
-
-    <?php  include 'pie.php'; ?>
+   </div>
+    <?php  include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php'; ?>
   </body>
 </html>

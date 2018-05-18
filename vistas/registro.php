@@ -18,8 +18,8 @@
     <body>
       <header>
         <?php
-        include 'header.php';
-        include 'menu.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/vistas/menu.php';
         ?>
       </header>
         <section class="main">
@@ -49,14 +49,14 @@
             <br><br><div class="" style="width:100%;">
               <?php
               if(isset($_POST['registrarme']))
-                require("validarCampos.php");
+                require($_SERVER['DOCUMENT_ROOT']."/controlador/validarCampos.php");
               ?>
             </div><br>
             <input type="submit" name="registrarme" value="Registrar" id="boton"/><br><br>
           </form>
         </section>
         <?php
-          include 'pie.php';
+          include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php';
         ?>
     </body>
 </html>

@@ -1,9 +1,9 @@
-1<?php
+<?php
 session_start();
 if(isset($_SESSION['usuario'])){
 
 }else{
-  header("Location: login.php?Error=Acceso denegado");
+  header("Location: ../vistas/login.php?Error=Acceso denegado");
 }
  ?>
 <html lang="es">
@@ -67,8 +67,8 @@ if(isset($_SESSION['usuario'])){
   <body>
     <header>
       <?php
-      include 'header.php';
-      include 'menu.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/vistas/menu.php';
        ?>
     </header>
   <section class="main">
@@ -153,10 +153,10 @@ if(isset($_SESSION['usuario'])){
                     <input type="submit" value="Comprar" id="boton"">
               </form>
   </section>
-  <script src="js/jquery-1.9.1.min.js"></script>
-  <script src="js/notificaciones.js"></script>
+  <script src="/js/jquery-1.9.1.min.js"></script>
+  <script src="/js/notificaciones.js"></script>
   <?php
-  include 'pie.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php';
    ?>
   </body>
 </html>

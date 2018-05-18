@@ -25,5 +25,5 @@ for($i=0;$i<count($datos);$i++){
   }
 }
 $_SESSION['carrito']=$datos;
-header ('Location: listacompras.php');
+header ('Location: ../vistas/listacompras.php');
 ?>

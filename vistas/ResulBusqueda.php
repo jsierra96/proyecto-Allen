@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'modelo/ObtProducto.php';
  ?>
 <html>
 <head>
@@ -16,6 +15,13 @@ include 'modelo/ObtProducto.php';
     .main{
       width: 68%;
     }
+    .main h1{
+      display: block;
+      font-family:letra4;
+      font-size:28px;
+      font-weight: 100;
+      margin: auto;
+    }
     </style>
 </head>
   <body>
@@ -28,23 +34,31 @@ include 'modelo/ObtProducto.php';
 
   <section class="main">
     <?php
-    $ObtPro=new ObtProductos();
-     if($ObtPro->ObtenerTodos()){
-       $input=$_SESSION["producto"];
-       $productos = array_reverse($input);
-       for ($i=1; $i <=20 ; $i++) {
+     if(isset($_SESSION["busqueda"])){
+       if(isset($_GET['error'])){
+         echo "<h1>No hubo coincidencias</h1>";
+       }else{
+       $productos=$_SESSION["busqueda"];
+       for ($i=0; $i < count($productos) ; $i++) {
          ?>
          <article class="categoria1">
            <div class="articulo">
-             <a href="DetalleProdu.php?id=<?php echo $productos[$i]['id']; ?>"><img src="<?php echo $productos[$i]['img'];?>" /></a>
+             <a href="/vistas/DetalleProdu.php?id=<?php echo $productos[$i]['id']; ?>"><img src="<?php echo $productos[$i]['img'];?>" /></a>
            </div>
-           <h3><a href="DetalleProdu.php?id=<?php echo $productos[$i]['id']; ?>"><?php echo $productos[$i]['producto'];?></a></h3>
+           <h3><a href="/vistas/DetalleProdu.php?id=<?php echo $productos[$i]['id']; ?>"><?php echo $productos[$i]['producto'];?></a></h3>
            <p>Sexo: <?php echo $productos[$i]['sexo'];?></p>
            <p>Color: <?php echo $productos[$i]['color'];?></p>
            <p>Precio: $<?php echo $productos[$i]['precio'];?> MX</p>
          </article>
          <?php
        }
+     }
+   }elseif (isset($_GET['error'])){
+     echo "<h1>No hubo coincidencias</h1>";
+   }else{
+       ?>
+       <h1>Debes ingresar algo a buscar</h1>
+       <?php
      }
      ?>
   </section>

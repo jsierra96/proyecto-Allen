@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'carrito.php';
+include $_SERVER['DOCUMENT_ROOT'].'/controlador/carrito.php';
 ?>
 <html>
 <head>
@@ -19,7 +19,7 @@ include 'carrito.php';
       margin: 60px auto;
       box-shadow: 0px 0px 5px 1px rgb(0,0,0);
       border-radius: 5px;
-      min-height: 270px;
+      min-height: 284px;
     }
     table{
       margin: auto;
@@ -48,12 +48,12 @@ include 'carrito.php';
   <body>
     <header>
       <?php
-          include 'header.php';
-          include 'menu.php';
+          include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
+          include $_SERVER['DOCUMENT_ROOT'].'/vistas/menu.php';
        ?>
     </header>
   <section class="main">
-    <form action="modificarlista.php" method="post">
+    <form action="/controlador/modificarlista.php" method="post">
       <input type="hidden" name="txtOpe">
       <input type="hidden" name="txtClave">
       <?php
@@ -89,14 +89,14 @@ include 'carrito.php';
                 </td>
                 <td><p>$ <?php echo $datos[$i]['precio'];?> MX</p></td>
                 <td><p><?php echo $datos[$i]['talla'];?></p></td>
-                <td><p><?php echo $datos[$i]['color'];?></p></td>
-                <td><input type="Submit" value=" " class="delete" onClick="txtClave.value=<?php echo $datos[$i]['id'];?>; txtOpe.value='d'"/></td>
+                <td><p><?php echo $datos[$i]['color'];?> </p></td>
+                <td><input class="delete" type="Submit" value=" " onClick="txtClave.value=<?php echo $datos[$i]['id'];?>; txtOpe.value='d'"/></td>
               </tr>
            <?php
             }
          }  ?>
                </table>
-               <h2 id="boton"><a href="confirLista.php">Comprar</a></h2><?php
+               <h2 id="boton"><a href="/controlador/confirLista.php">Comprar</a></h2><?php
              }else
              echo '<center><h3>Est&aacute; vacia tu lista de compras</h3></center>';
       }else
@@ -105,7 +105,7 @@ include 'carrito.php';
     </form>
   </section>
   <?php
-  include 'pie.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php';
    ?>
   </body>
 </html>

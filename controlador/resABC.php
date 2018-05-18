@@ -1,5 +1,5 @@
 <?php
-include 'modelo\ObtProducto.php';
+include '../modelo/modelo/ObtProducto.php';
 session_start();
 $sErr=""; $sOpe = ""; $sCve = "";
 $oPersHosp = new ObtProductos();
@@ -42,8 +42,8 @@ $oPersHosp = new ObtProductos();
 			$sErr = "Faltan datos";
 		}
 	if ($sErr == "")
-		header("Location: tabProductos.php");
+		header("Location: ../vistas/tabProductos.php");
 	else
-		header("Location: tabProductos.php?error=".$sErr);
+		header("Location: ../vistas/tabProductos.php?error=".$sErr);
 	exit();
 ?>

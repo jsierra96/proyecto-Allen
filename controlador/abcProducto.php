@@ -1,9 +1,9 @@
 <?php
 session_start();
 if(!isset($_SESSION['admin'])){
-  header("Location: login.php");
+  header("Location: ../vistas/login.php");
 }
-include_once("modelo\ObtProducto.php");
+include_once("../vistas/modelo/ObtProducto.php");
 $ObtP=new ObtProductos();
 $bCampoEditable = false; $bLlaveEditable=false;
 $sErr=""; $sOpe = ""; $sCve = ""; $sNomBoton ="Borrar";
@@ -39,12 +39,12 @@ $pro=$_SESSION['producto'];
   <head>
     <title>Boutique Allen:. Panel Administrador</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="img/allen.png"/>
-    <link rel="stylesheet" href="css/admin.css" type="text/css"/>
-    <link rel="stylesheet" href="css/fuentes.css" type="text/css"/>
-    <link rel="stylesheet" href="css/icons.css" type="text/css"/>
-    <link rel="stylesheet" href="css/Animate.css" type="text/css"/>
-    <link rel="stylesheet" href="css/menu.css" type="text/css"/>
+    <link rel="icon" href="/img/allen.png"/>
+    <link rel="stylesheet" href="/css/admin.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/fuentes.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/icons.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/Animate.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/menu.css" type="text/css"/>
     <style>
     .main{
       padding-top: 30px;
@@ -58,15 +58,15 @@ $pro=$_SESSION['producto'];
   <body>
     <header>
       <?php
-      include 'header.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
       ?>
     </header>
     <section class="container">
       <?php
-        include 'aside.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/vistas/aside.php';
       ?>
       <section class="main">
-        <form method="get" action="resABC.php" name="abcPH">
+        <form method="get" action="/controlador/resABC.php" name="abcPH">
           <h1>Producto a <?php echo $sNomBoton;?></h1>
           <input type="hidden" name="txtOpe" value="<?php echo $sOpe;?>">
   				<input type="hidden" name="txtClave" value="<?php echo $sCve;?>"/>
@@ -122,7 +122,7 @@ $pro=$_SESSION['producto'];
   				<input class="boton" type="submit" name="Submit" value="Cancelar" onClick="abcPH.action='tabProductos.php';">
            <div style="width:100px;height:10px;clear: both;"></div>
   			</form>
-        <script src="js/tipos.js"></script>
+        <script src="/js/tipos.js"></script>
       </section>
     </section>
   </body>

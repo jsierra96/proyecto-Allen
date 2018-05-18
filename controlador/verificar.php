@@ -1,12 +1,12 @@
 <?php
     session_start();
-    include "modelo/conexion.php";
+    include "../modelo/conexion.php";
     $pass=$_POST['password'];
     $user=$_POST['user'];
     if(isset($_GET['salir'])){
       unset($_SESSION['usuario']);
       unset($_SESSION['admin']);
-      header("Location: index.php");
+      header("Location: ../index.php");
     } else if(!empty($pass)&&!empty($user)){
         $sQuery = "SELECT * FROM usuarios WHERE email ='".$user."' AND password = '".$pass."'";
         $Conn=new conexion();
@@ -17,7 +17,7 @@
                   'email'=>$arrRS[0][6],'paypal'=>$arrRS[0][8],'id'=>$arrRS[0][0]);
                   $_SESSION['usuario']=$arreglo;
                   $Conn->desconectar();
-                  header("Location: index.php");
+                  header("Location: ../index.php");
              }else if($arrRS == null) {
                   $sQuery = "SELECT * FROM adminsitradores WHERE email ='".$user."' AND password = '".$pass."'";
                   $arrRS = $Conn->ejecutarConsulta($sQuery);
@@ -25,13 +25,13 @@
                   if ($arrRS != null){
                        $arreglo[]=array('nombre'=>$arrRS[0][1],'apellidos'=>$arrRS[0][2],'email'=>$arrRS[0][4]);
                        $_SESSION['admin']=$arreglo;
-                       header("Location: administrador.php");
+                       header("Location: ../vistas/administrador.php");
                   }else{
-                       header("Location: login.php?error=datos no validos");
+                       header("Location: ../vistas/login.php?error=datos no validos");
                   }
             }
         }
     }else{
-      header("Location: login.php?error=No se introdujo datos");
+      header("Location: ../vistas/login.php?error=No se introdujo datos");
     }
  ?>

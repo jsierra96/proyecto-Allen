@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['usuario'])){
   header("Location: login.php?erro=no_has_iniciado_sesion");
 }
-include 'modelo/ObtProducto.php';
+include $_SERVER['DOCUMENT_ROOT'].'/modelo/ObtProducto.php';
  ?>
 <html>
 <head>
@@ -28,8 +28,8 @@ include 'modelo/ObtProducto.php';
   <body>
     <header>
       <?php
-         include 'header.php';
-         include 'menu.php';
+         include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
+         include $_SERVER['DOCUMENT_ROOT'].'/vistas/menu.php';
        ?>
     </header>
 
@@ -77,7 +77,7 @@ include 'modelo/ObtProducto.php';
      ?>
   </section>
   <?php
-  include 'pie.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php';
    ?>
   </body>
 </html>

@@ -3,23 +3,23 @@
   <head>
     <title>Boutique Allen:. Login</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="img/allen.png"/>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
-    <link rel="stylesheet" href="css/fuentes.css" type="text/css"/>
-    <link rel="stylesheet" href="css/icons.css" type="text/css"/>
-    <link rel="stylesheet" href="css/Animate.css" type="text/css"/>
-    <link rel="stylesheet" href="css/menu.css" type="text/css"/>
+    <link rel="icon" href="/img/allen.png"/>
+    <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/fuentes.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/icons.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/Animate.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/menu.css" type="text/css"/>
   </head>
   <body>
     <header>
       <?php
-        include 'header.php';
-        include 'menu.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/vistas/menu.php';
       ?>
     </header>
         <section class="main">
           <section class="login">
-            <form action="verificar.php" method="post">
+            <form action="/controlador/verificar.php" method="post">
               <label>Correo electronico:</label><br>
               <input type="e-mail" name="user" placeholder="email" class="input"><br><br>
               <label>Contrase&ntilde;a:</label><br>
@@ -35,7 +35,7 @@
           </section>
         </section>
         <?php
-        include 'pie.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php';
         ?>
     </body>
 </html>

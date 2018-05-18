@@ -1,5 +1,5 @@
 <?php
-include 'modelo/ObtProducto.php';
+include $_SERVER['DOCUMENT_ROOT'].'/modelo/ObtProducto.php';
 if(empty($_POST['nombre']) || empty($_POST['rbSexo']) || empty($_POST['descripcion']) || empty($_POST['precio'])
    || empty($_POST['talla']) || empty($_POST['color']) || $_POST['tipo'] =="Escoja una opcion"){
   header("Location: AgregarProductos.php?error=faltan_datos");
@@ -40,7 +40,7 @@ if(empty($_POST['nombre']) || empty($_POST['rbSexo']) || empty($_POST['descripci
           if($InPro->Insertar($nom,$des,$pre,$can,$sex,$tip,$tal,$col,$imagen)==-1){
             echo 'No se modifico';
           }else {
-            header("Location: AgregarProductos.php?ok=aceptado");
+            header("Location: ../vistas/AgregarProductos.php?ok=aceptado");
           }
       }
     }

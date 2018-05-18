@@ -99,7 +99,7 @@ h1{
   position: relative;
   left: 20%;
   top:4em;
-  background:#D7DBDD;
+  background:#F7F9F9;
   width: 80%;
   min-height: 600px;
   box-sizing: border-box;
@@ -111,6 +111,13 @@ form{
   width: 90%;
   border-radius:2px;
   border:solid 2px #3498DB;
+  box-sizing: border-box;
+}
+#form{
+  border:none;
+  padding: 10px;
+  margin: 10px auto;
+  width: 95%;
   box-sizing: border-box;
 }
 .registro{

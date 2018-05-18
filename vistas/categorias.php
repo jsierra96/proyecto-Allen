@@ -20,8 +20,8 @@ session_start();
   <body>
     <header>
       <?php
-         include 'header.php';
-         include 'menu.php';
+         include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
+         include $_SERVER['DOCUMENT_ROOT'].'/vistas/menu.php';
        ?>
     </header>
 
@@ -149,7 +149,7 @@ session_start();
 
   </section>
   <?php
-  include 'pie.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php';
    ?>
   </body>
 </html>

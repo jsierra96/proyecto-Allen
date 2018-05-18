@@ -73,9 +73,10 @@
 
     function modificar($ida,$id,$pro,$des,$tipo,$talla,$precio,$cat,$sexo,$color){
   	$oAccesoDatos=new conexion();
+    echo $color;
   	$sQuery="";
   	$nAfectados=-1;
-  		if ($id=="" OR $pro == "" OR $des == "" OR $tipo == "" OR $tipo =="" OR $talla=="" OR $precio=="" OR $cat=="" OR $sexo=="" OR $color=="")
+  		if ($id=="" OR $pro == "" OR $des == "" OR $tipo == "" OR $talla=="" OR $precio=="" OR $cat==-1 OR $sexo=="" OR $color=="")
   			throw new Exception("ObtProductos->modificar(): faltan datos");
   		else{
   			if ($oAccesoDatos->conectar()){

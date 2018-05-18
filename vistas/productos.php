@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'modelo/ObtProducto.php';
+include $_SERVER['DOCUMENT_ROOT'].'/modelo/ObtProducto.php';
  ?>
 <html>
 <head>
@@ -21,8 +21,8 @@ include 'modelo/ObtProducto.php';
   <body>
     <header>
       <?php
-      include 'header.php';
-      include 'menu.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/vistas/header.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/vistas/menu.php';
        ?>
     </header>
 
@@ -34,6 +34,7 @@ include 'modelo/ObtProducto.php';
         if(isset($_SESSION["producto"])){
           $productos=$_SESSION["producto"];
           for ($i=0; $i <count($productos) ; $i++) {
+            if($productos[$i]['cantidad']!=0){
             if($_GET['sexo']=="men"){
               if($_GET['tipo']=="pantalon" && $productos[$i]['sexo']=="Hombre" && $productos[$i]['tipo']=="Pantalon"){
                 imprimir($productos,$i);
@@ -70,22 +71,23 @@ include 'modelo/ObtProducto.php';
                 imprimir($productos,$i);
               }
             }else if($_GET['sexo']=="children"){
-              if($_GET['tipo']=="camisa" && $productos[$i]['sexo']=="niño" && $productos[$i]['tipo']=="Blusa"){
+              if($_GET['tipo']=="camisa" && $productos[$i]['sexo']=="Niño" && $productos[$i]['tipo']=="Blusa"){
                 imprimir($productos,$i);
               }else if($_GET['tipo']=="pijama" && $productos[$i]['sexo']=="Niño" && $productos[$i]['tipo']=="Pijama"){
                 imprimir($productos,$i);
               }
             }
           }
+          }
         }
       }
     }else{
-      header ("Location: index.php");
+      header ("Location: ../index.php");
     }
      ?>
   </section>
   <?php
-  include 'pie.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php';
    ?>
   </body>
   <?php

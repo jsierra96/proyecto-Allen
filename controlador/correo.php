@@ -1,13 +1,15 @@
 <?php
 session_start();
-include 'modelo/ObtProducto.php';
+include '../modelo/ObtProducto.php';
 		$arreglo=$_SESSION['carrito'];
     $arreglo2=$_SESSION['usuario'];
+		$producto=$_SESSION['producto'];
     $total=0;
 		$fecha=date("Y-m-d");
 		$status="Acreditando pago";
 		//$Compra=new ObtProductos();
 		$idCompra=contador();
+		//$NuevaCantidad=0;
 		$tabla='<table border="1" style="width:500px;border-collapse: collapse;">
 			<tr>
 			<th style="border-bottom:solid 2px rgb(68, 69, 70);text-align: center;">Nombre</th>
@@ -16,8 +18,21 @@ include 'modelo/ObtProducto.php';
 			<th style="border-bottom:solid 2px rgb(68, 69, 70);text-align: center;">Subtotal</th>
 			</tr>';
 		for($i=0;$i<count($arreglo);$i++){
+			$tipo="";
+			$sexo="";
+			$NuevaCantidad=0;
+			for ($x=0; $x < count($producto); $x++) {
+				if($arreglo[$i]['id']==$producto[$x]['id']){
+					$tipo=$producto[$x]['tipo'];
+					$sexo=$producto[$x]['sexo'];
+					$NuevaCantidad=$producto[$x]['cantidad']-$arreglo[$i]['elementos'];
+					if($NuevaCantidad<0)
+					  $NuevaCantidad=0;
+				}
+			}
 			$Compra=new ObtProductos();
 			$nResultado = $Compra->Compras($idCompra,$arreglo2[0]['id'],$arreglo[$i]['id'],$fecha,$arreglo[$i]['elementos'],$status);
+		  $Compra->modificar($arreglo[0]['id'],$arreglo[0]['id'],$arreglo[$i]['nombre'],$arreglo[$i]['descri'],$tipo,$arreglo[$i]['talla'],$arreglo[$i]['precio'],$NuevaCantidad,$sexo,$arreglo[$i]['color']);
 			$tabla=$tabla.'<tr>
 				<td style="text-align: center;">'.$arreglo[$i]['nombre'].'</td>
 				<td style="text-align: center;">'.$arreglo[$i]['elementos'].'</td>
@@ -26,6 +41,7 @@ include 'modelo/ObtProducto.php';
 				</tr>
 			';
 			$total=$total+($arreglo[$i]['elementos']*$arreglo[$i]['precio']);
+			unset($_SESSION['carrito']);
 		}
 
 		$tabla=$tabla.'</table>';
@@ -96,7 +112,7 @@ include 'modelo/ObtProducto.php';
 		//header("Location: ../pagina-web/carrito.php");
 		function contador()
 	  {
-	      $archivo = "controlador/idCompra.txt"; //el archivo que contiene en numero
+	      $archivo = "idCompra.txt"; //el archivo que contiene en numero
 	      $f = fopen($archivo, "r"); //abrimos el archivo en modo de lectura
 	      if($f)
 	      {

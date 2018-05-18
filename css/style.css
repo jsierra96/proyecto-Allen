@@ -254,11 +254,13 @@ footer{
 /*--------------------------------------------------------------------------------------------------------------------------------*/
 .main .delete{
   display: block;
-  background: rgb(255, 0, 0);
-  width: 30px;
+  width: 40px;
+  color:#000;
   border-radius: 5px;
-  height: 10px;
+  height: 40px;
   border:none;
+  background: url('../img/garbage_78344.png');
+  background-size: contain;
 }
 #b{
   margin: auto;
@@ -332,4 +334,78 @@ footer{
   font-weight: bold;
   font-size:22px;
   line-height: 3  0px;
+}
+/*-----------------------------------------------Estulos del aside------------------------------------------------------------------------------------------------*/
+#contenedor{
+  margin: 10px auto;
+  padding: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+#contenedor aside{
+  float: left;
+  display: block;
+  border-radius: 4px;
+  margin: 20px 0 0 30px;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0);
+  background:#F2F3F4;
+  width: 20%;
+  padding: 10px;
+}
+#contenedor h1{
+  color:#922B21;
+  font-size: 26px;
+  font-family: letra8;
+  text-align: center;
+}
+aside a{
+  color:#145A32;
+  display: block;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: justify;
+  text-decoration: none;
+}
+#contenedor .main h2{
+  text-align: center;
+  font-family: letra4;
+  color:#145A32;
+  font-size: 30px;
+}
+#contenedor .main p{
+  font-size: 22px;
+  color:#4A235A;
+  font-weight: 100;
+}
+#contenedor .main .dos{
+  margin: 30px;
+  display: flex;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0);
+  background:#F2F3F4;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.dos article{
+  text-align: justify;
+  padding: 30px;
+}
+.section{
+  text-align: justify;
+  width: 94%;
+  padding: 30px;
+  border-radius: 4px;
+  margin: 5px auto;
+  box-shadow: 0px 0px 5px 1px rgb(0,0,0);
+  background:#F2F3F4;
+  box-sizing: border-box;
+}
+.pago{
+  border:dashed #000 1px;
+  padding: 0 20px;
+  border-radius:10px;
+  box-sizing: border-box;
+}
+.pago img{
+  width: 100%;
+  height: auto;
 }
