@@ -6,7 +6,7 @@
     if(isset($_GET['salir'])){
       unset($_SESSION['usuario']);
       unset($_SESSION['admin']);
-      header("Location: ../index.php");
+      header("Location: ../vistas/login.php");
     } else if(!empty($pass)&&!empty($user)){
         $sQuery = "SELECT * FROM usuarios WHERE email ='".$user."' AND password = '".$pass."'";
         $Conn=new conexion();
@@ -17,7 +17,7 @@
                   'email'=>$arrRS[0][6],'paypal'=>$arrRS[0][8],'id'=>$arrRS[0][0]);
                   $_SESSION['usuario']=$arreglo;
                   $Conn->desconectar();
-                  header("Location: ../index.php");
+                  header("Location: ../vistas/historial.php");
              }else if($arrRS == null) {
                   $sQuery = "SELECT * FROM adminsitradores WHERE email ='".$user."' AND password = '".$pass."'";
                   $arrRS = $Conn->ejecutarConsulta($sQuery);

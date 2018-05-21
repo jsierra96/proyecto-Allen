@@ -1,5 +1,5 @@
 <?php
-include '../modelo/modelo/ObtProducto.php';
+include '../modelo/ObtProducto.php';
 session_start();
 $sErr=""; $sOpe = ""; $sCve = "";
 $oPersHosp = new ObtProductos();

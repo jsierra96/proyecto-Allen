@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['admin'])){
   header("Location: ../vistas/login.php");
 }
-include_once("../vistas/modelo/ObtProducto.php");
+include_once("../modelo/ObtProducto.php");
 $ObtP=new ObtProductos();
 $bCampoEditable = false; $bLlaveEditable=false;
 $sErr=""; $sOpe = ""; $sCve = ""; $sNomBoton ="Borrar";
@@ -119,7 +119,7 @@ $pro=$_SESSION['producto'];
             </div>
           </div>
   				<input class="boton" type ="submit" value="<?php echo $sNomBoton;?>"/>
-  				<input class="boton" type="submit" name="Submit" value="Cancelar" onClick="abcPH.action='tabProductos.php';">
+  				<input class="boton" type="submit" name="Submit" value="Cancelar" onClick="abcPH.action='../vistas/tabProductos.php';">
            <div style="width:100px;height:10px;clear: both;"></div>
   			</form>
         <script src="/js/tipos.js"></script>

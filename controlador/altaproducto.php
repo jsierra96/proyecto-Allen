@@ -40,7 +40,7 @@ if(empty($_POST['nombre']) || empty($_POST['rbSexo']) || empty($_POST['descripci
           if($InPro->Insertar($nom,$des,$pre,$can,$sex,$tip,$tal,$col,$imagen)==-1){
             echo 'No se modifico';
           }else {
-            header("Location: ../vistas/AgregarProductos.php?ok=aceptado");
+            header("Location: ../vistas/tabProductos.php");
           }
       }
     }
