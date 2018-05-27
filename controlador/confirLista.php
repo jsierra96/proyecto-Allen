@@ -1,7 +1,8 @@
 <?php
 session_start();
 if(isset($_SESSION['usuario'])){
-
+  if(!isset($_SESSION['carrito']))
+     header("Location: ../vistas/historial.php");
 }else{
   header("Location: ../vistas/login.php?Error=Acceso denegado");
 }

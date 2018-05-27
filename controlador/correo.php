@@ -53,7 +53,7 @@ include '../modelo/ObtProducto.php';
 		$hora=date("H:i:s");
 		$asunto="Compra en Boutique Allen";
 		$desde="www.allen.esy.es";
-		$correo="joanan96@gmail.com";
+		$correo=$arreglo2[0]['email'];
 		$cuenta=$arreglo2[0]['paypal'];
 
 		$comentario='
@@ -65,10 +65,12 @@ include '../modelo/ObtProducto.php';
 				heigth:300px;
 			">
 			<center>
-				<img src="https://www.hublot.com/images/ImagesBoutiques/cannes_1.jpg" width="300px" heigth="250px">
-				<h1>Muchas gracias por comprar en Fantasia Floral</h1>
+				<img src="https://github.com/minato96/proyecto-Allen/blob/master/img/1641822-1.jpg" width="300px" heigth="250px">
+				<h1>Muchas gracias por comprar en Boutique Allen</h1>
 			</center>
-			<p>Hola '.$nombre.' '.$apellido.' muchas gracias por comprar aquí te mando los detalles de tu compra y este pedido sera enviado a la direccion '.$direccion.' para cuelquier duda contactanos en agumone419@gmail.com, este es tu cuenta Paypal '.$cuenta.' la cual verificaremos cuando se haya depositado el pago.</p>
+			<p>Hola '.$nombre.' '.$apellido.' muchas gracias por comprar aquí te mando los detalles
+			 de tu compra y este pedido sera enviado a la direccion '.$direccion.' para cuelquier duda contactanos en
+			 agumone419@gmail.com, este es tu cuenta Paypal '.$cuenta.' la cual verificaremos cuando se haya depositado el pago.</p>
 			<p>Lista de Artículos<br>
 				<center>'.$tabla.'</center>
 				<br>
@@ -87,7 +89,7 @@ include '../modelo/ObtProducto.php';
         heigth:300px;
       ">
       <center>
-        <img src="https://www.hublot.com/images/ImagesBoutiques/cannes_1.jpg" width="300px" heigth="250px">
+        <img src="https://github.com/minato96/proyecto-Allen/blob/master/img/1641822-1.jpg" width="300px" heigth="250px">
         <h1>Compra comenzada</h1>
       </center>
       <p>Se a comenzado un compra Online, este pendiente de la acreditacion del pago desde la cuenta del usuario '.$nombre.' '.$apellido.' el cual es propietario de la cuenta de Paypal '.$cuenta.'</p>

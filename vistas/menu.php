@@ -18,12 +18,12 @@
           </ul>
         </li>
         <li><a href="/vistas/historial.php">Compras</a></li>
-        <li><a class="icon-cart" href="listacompras.php"></a></li>
+        <li><a class="icon-cart" href="/vistas/listacompras.php"></a></li>
         <?php
       }else{?>
         <li><a href="/vistas/login.php">Ingresa</a></li>
         <li><a href="/vistas/registro.php">Registrar</a></li>
-        <li><a class="icon-cart" href="listacompras.php"></a></li>
+        <li><a class="icon-cart" href="/vistas/listacompras.php"></a></li>
       <?php
         }
       ?>

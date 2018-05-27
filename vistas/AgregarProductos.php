@@ -27,7 +27,7 @@ if(!isset($_SESSION['admin'])){
        ?>
        <section class="main">
          <h1>Agregar un Nuevo Producto</h1>
-         <form method="post" action="altaproducto.php" enctype="multipart/form-data">
+         <form method="post" action="../controlador/altaproducto.php" enctype="multipart/form-data">
            <div class="registro">
              <div class="form">
                <label>Nombre del producto:</label>
@@ -51,7 +51,7 @@ if(!isset($_SESSION['admin'])){
               <input type="radio" name="rbSexo" value="Niño" onClick="opcion(3);"/><br><br>
                <label>Tipo de producto:</label>
                <select class="" name="tipo">
-                 <option>Escoja una opcion</option>
+                 <option id="opcion0">Escoja una opcion</option>
                  <option style="display:none;" id="opcion1"></option>
                  <option style="display:none;" id="opcion2"></option>
                  <option style="display:none;" id="opcion3"></option>
@@ -77,7 +77,8 @@ if(!isset($_SESSION['admin'])){
                ?>
          </form>
        </section>
-      <script src="js/tipos.js"></script>
+       <script src="/js/jquery-1.9.1.min.js"></script>
+      <script src="/js/tipos.js"></script>
    </section>
  </body>
  </html>

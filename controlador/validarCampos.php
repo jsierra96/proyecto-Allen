@@ -17,7 +17,7 @@
           $arreglo[]=array('nombre'=>$nombre,'apellidos'=>$apellidos,'direccion'=>$dir,'telefono'=>$telefono,
         'email'=>$email,'paypal'=>$cuentapago,'fecha'=>$fechanaci,'contra'=>$pass);
         $_SESSION['user']=$arreglo;
-        require 'modelo/introUser.php';
+        require '../modelo/introUser.php';
         }else{
           echo '<center><h5>Por favor, introduzca dos contrase&ntilde;as identicas.</h5></center><br>';
         }

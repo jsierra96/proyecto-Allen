@@ -33,10 +33,10 @@ session_start();
       <article class="container">
          <div class="slidesjs-wraper">
             <div class="slides">
-                <img src="https://www.hublot.com/images/ImagesBoutiques/cannes_1.jpg" />
-                <img src="http://www.boutiquenadine.com/wp-content/uploads/2017/09/boutique-nadine-viadebenci-04.jpg" />
-                <img src="http://www.spelldesigns.com/wp-content/uploads/BoutiqueParty-0450.jpg" />
-                <img src="http://www.travelingchicboutique.com/wp-content/uploads/2016/10/Traveling-Chic-Boutique-Trunk-Show-2.jpg" />
+                <img src="/img/Allen3.png" />
+                <img src="/img/Allen4.jpg" />
+                <img src="/img/Allen1.png" />
+                <img src="/img/Allen2.png" />
             </div>
         </div>
         <script src="/js/jquery-1.9.1.min.js"></script>
@@ -64,7 +64,7 @@ session_start();
           <p>Ser una empresa de referencia, líder en distribución de moda, en continuo crecimiento, con presencia en el mercado, que se distinga por proporcionar una calidad de atención y servicio excelente a sus clientes.</p>
         </article>
       </section>
-      
+
     </section>
    </div>
     <?php  include $_SERVER['DOCUMENT_ROOT'].'/vistas/pie.php'; ?>
